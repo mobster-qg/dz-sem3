@@ -5,19 +5,20 @@
 //23432 -> да
 Console.Clear();
 Console.Write("Введите пятизначное число ");
-int num = int.Parse(Console.ReadLine());
-if((num<=10) & (num >=10000));
-  
-    int a = num % 10 ; int c = num / 10;
-    int b = (num % 100) ; int d = (num / 100) ;
-   
-    
-   if(a == c && b == d)
-{
-    Console.WriteLine($"  палиндром");
-} 
+string number = Console.ReadLine();
+
+
+
+  if (number[0]==number[4] || number[1]==number[3])
+  {
+    Console.WriteLine($" {number} - палиндром.");
+  }
+
 else
 {
-    Console.WriteLine( $" не палиндром");
+    Console.WriteLine( $"{number} не палиндром");
     }
-Console.WriteLine($"{num>=10000} не пятизначное");
+if (number!.Length > 5)
+{
+    Console.WriteLine($"Введено не правильное число");
+}
